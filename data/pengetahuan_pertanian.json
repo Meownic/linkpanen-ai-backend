@@ -1,0 +1,161 @@
+{
+  "catatan_pemeliharaan": "File ini berisi pengetahuan agronomi yang relatif stabil (cara tanam, syarat tumbuh). Data yang cepat berubah (harga, cuaca, kebijakan) TIDAK ditaruh di sini — lihat skema_harga_pasar.json dan aturan_harga_pasar di ai_behavior_rules.json. Tambahkan komoditas baru dengan struktur yang sama.",
+  "komoditas": [
+    {
+      "nama": "Padi",
+      "kategori": "Tanaman Pangan",
+      "ringkasan_cepat": "Padi cocok ditanam di sawah beririgasi/lahan berlumpur, panen 80-130 hari tergantung varietas. Tantangan utama: wereng batang coklat dan blas. Indonesia salah satu produsen dan konsumen beras terbesar dunia.",
+      "syarat_tumbuh": {
+        "iklim": "Tropis, curah hujan 1500-2000 mm/tahun",
+        "ketinggian": "0-1500 mdpl (optimal di bawah 800 mdpl)",
+        "tanah": "Lempung berlumpur, subur, mampu menahan air (untuk sawah irigasi)"
+      },
+      "tahapan_budidaya": {
+        "persiapan_lahan": "Pembajakan dan penggaruan tanah sawah, perataan lahan, pembuatan pematang",
+        "pembibitan": "Semai benih di persemaian 20-25 hari sebelum tanam pindah",
+        "penanaman": "Tanam pindah bibit dengan sistem tegel atau jajar legowo untuk hasil lebih optimal",
+        "pemupukan": "Pupuk dasar (urea, SP-36, KCl) sesuai rekomendasi setempat, dilanjutkan pemupukan susulan pada fase vegetatif dan generatif",
+        "pengairan": "Genangan air dijaga bertahap, dikeringkan menjelang panen",
+        "pengendalian_hama_penyakit": "Waspada wereng batang coklat, penggerek batang, blas, dan hawar daun bakteri; gunakan varietas tahan dan monitoring rutin",
+        "panen": "80-130 hari setelah tanam tergantung varietas, saat 90-95% bulir menguning"
+      },
+      "musim_tanam_indonesia": "Musim hujan (Oktober-Maret) dan musim kemarau (April-September, tergantung ketersediaan irigasi)",
+      "catatan_global": "Produsen utama dunia: Tiongkok, India, Indonesia, Bangladesh, Vietnam. Indonesia salah satu produsen dan konsumen beras terbesar dunia."
+    },
+    {
+      "nama": "Jagung",
+      "kategori": "Tanaman Pangan",
+      "ringkasan_cepat": "Jagung bisa ditanam sepanjang tahun, panen 90-120 hari. Butuh air cukup saat berbunga dan pengisian biji. Hama yang perlu diwaspadai: ulat grayak (fall armyworm). Indonesia termasuk 10 besar produsen dunia.",
+      "syarat_tumbuh": {
+        "iklim": "Tropis-subtropis, curah hujan 600-1200 mm/musim tanam",
+        "ketinggian": "0-1800 mdpl",
+        "tanah": "Gembur, drainase baik, pH 5,6-7,5"
+      },
+      "tahapan_budidaya": {
+        "persiapan_lahan": "Pengolahan tanah sempurna atau tanpa olah tanah (TOT), pembuatan larikan tanam",
+        "penanaman": "Tanam benih langsung 2 biji/lubang, jarak tanam sekitar 70x20 cm",
+        "pemupukan": "Pupuk dasar NPK saat tanam, pupuk susulan urea pada umur 25-30 dan 45-50 hari",
+        "pengairan": "Kritis air pada fase berbunga dan pengisian biji",
+        "pengendalian_hama_penyakit": "Waspada ulat grayak (fall armyworm), penggerek batang, bulai",
+        "panen": "90-120 hari setelah tanam tergantung varietas, saat kelobot mengering dan biji keras"
+      },
+      "musim_tanam_indonesia": "Dapat ditanam sepanjang tahun, optimal awal musim hujan dan awal musim kemarau",
+      "catatan_global": "Produsen utama dunia: Amerika Serikat, Tiongkok, Brasil, Argentina, Indonesia termasuk 10 besar produsen dunia."
+    },
+    {
+      "nama": "Kedelai",
+      "kategori": "Tanaman Pangan/Palawija",
+      "ringkasan_cepat": "Kedelai umumnya ditanam sebagai tanaman sela setelah padi, panen 80-100 hari. Tidak butuh banyak pupuk nitrogen karena bisa fiksasi N sendiri. Indonesia masih net importir kedelai dari Brasil/AS/Argentina.",
+      "syarat_tumbuh": {
+        "iklim": "Tropis, curah hujan 100-200 mm/bulan selama pertumbuhan",
+        "ketinggian": "0-900 mdpl (optimal di bawah 500 mdpl)",
+        "tanah": "Lempung berpasir hingga lempung liat, drainase baik, pH 5,8-7"
+      },
+      "tahapan_budidaya": {
+        "persiapan_lahan": "Olah tanah ringan, buat bedengan/larikan untuk drainase",
+        "penanaman": "Tanam benih langsung 2-3 biji/lubang, jarak tanam sekitar 40x15 cm",
+        "pemupukan": "Pupuk dasar rendah nitrogen (karena kedelai bisa fiksasi N sendiri lewat bintil akar), tambahan P dan K",
+        "pengairan": "Kritis air pada fase perkecambahan, berbunga, dan pengisian polong",
+        "pengendalian_hama_penyakit": "Waspada lalat kacang, ulat grayak, penyakit karat daun",
+        "panen": "80-100 hari setelah tanam, saat polong dan daun mengering/menguning"
+      },
+      "musim_tanam_indonesia": "Umumnya ditanam sebagai tanaman sela/palawija setelah padi, akhir musim hujan-awal kemarau",
+      "catatan_global": "Produsen utama dunia: Brasil, Amerika Serikat, Argentina. Indonesia masih net importir kedelai."
+    },
+    {
+      "nama": "Cabai",
+      "kategori": "Hortikultura",
+      "ringkasan_cepat": "Cabai bisa ditanam sepanjang tahun, mulai panen 75-90 hari lalu dipanen berkala tiap 3-5 hari. Rentan lalat buah dan penyakit patek. Harganya termasuk paling fluktuatif di antara komoditas pangan Indonesia.",
+      "syarat_tumbuh": {
+        "iklim": "Tropis, suhu optimal 24-28°C, sensitif terhadap genangan air",
+        "ketinggian": "0-1400 mdpl tergantung jenis (cabai rawit lebih tahan dataran rendah)",
+        "tanah": "Gembur, subur, drainase baik, pH 5,5-6,8"
+      },
+      "tahapan_budidaya": {
+        "persiapan_lahan": "Buat bedengan dengan mulsa plastik hitam perak untuk menekan gulma dan menjaga kelembapan",
+        "pembibitan": "Semai benih di tray/polybag 3-4 minggu sebelum tanam pindah",
+        "penanaman": "Tanam pindah bibit, jarak tanam sekitar 60x50 cm",
+        "pemupukan": "Pupuk dasar kandang + NPK, pupuk susulan berkala tiap 1-2 minggu terutama saat berbunga-berbuah",
+        "pengairan": "Sistem irigasi tetes/leb dianjurkan, hindari genangan",
+        "pengendalian_hama_penyakit": "Waspada lalat buah, thrips, kutu kebul (vektor virus kuning), antraknosa/patek",
+        "panen": "75-90 hari setelah tanam, dilanjutkan panen berkala tiap 3-5 hari selama 2-3 bulan"
+      },
+      "musim_tanam_indonesia": "Bisa sepanjang tahun, tetapi harga sangat fluktuatif mengikuti pasokan musiman",
+      "catatan_global": "Indonesia salah satu produsen dan konsumen cabai terbesar dunia; harga cabai di dalam negeri sangat sensitif terhadap cuaca dan hari besar keagamaan."
+    },
+    {
+      "nama": "Kopi",
+      "kategori": "Perkebunan",
+      "ringkasan_cepat": "Kopi Arabika cocok dataran tinggi sejuk, Robusta di dataran rendah-menengah. Mulai berbuah umur 2,5-3 tahun. Indonesia produsen kopi terbesar ke-4 dunia, terutama untuk Robusta.",
+      "syarat_tumbuh": {
+        "iklim": "Arabika: dataran tinggi sejuk (800-2000 mdpl); Robusta: dataran rendah-menengah lebih panas (0-800 mdpl)",
+        "tanah": "Gembur, kaya bahan organik, drainase baik, pH 5,5-6,5"
+      },
+      "tahapan_budidaya": {
+        "persiapan_lahan": "Pembuatan lubang tanam dan naungan sementara/tetap",
+        "penanaman": "Tanam bibit hasil sambung pucuk/stek, jarak tanam sekitar 2,5x2,5 m tergantung varietas",
+        "pemupukan": "Pupuk organik + NPK berkala, disesuaikan fase pertumbuhan dan pembuahan",
+        "pengendalian_hama_penyakit": "Waspada hama penggerek buah kopi (PBKo), penyakit karat daun",
+        "panen": "Mulai berbuah umur 2,5-3 tahun, panen petik merah (selektif) untuk kualitas terbaik"
+      },
+      "musim_tanam_indonesia": "Penanaman awal musim hujan; panen umumnya musim kemarau (Mei-September, bervariasi per daerah)",
+      "catatan_global": "Produsen utama dunia: Brasil, Vietnam, Kolombia, Indonesia (peringkat 4 besar dunia, terutama Robusta)."
+    },
+    {
+      "nama": "Kelapa Sawit",
+      "kategori": "Perkebunan",
+      "ringkasan_cepat": "Sawit mulai berproduksi umur 3-4 tahun, panen TBS rutin tiap 7-10 hari. Ancaman utama: penyakit Ganoderma. Indonesia & Malaysia menguasai mayoritas produksi minyak sawit dunia.",
+      "syarat_tumbuh": {
+        "iklim": "Tropis basah, curah hujan merata 2000-2500 mm/tahun tanpa musim kering panjang",
+        "ketinggian": "0-500 mdpl",
+        "tanah": "Berbagai jenis tanah mineral, drainase baik, pH 4-6"
+      },
+      "tahapan_budidaya": {
+        "pembibitan": "Bibit dari pembibitan awal (pre-nursery) 3 bulan, dilanjutkan pembibitan utama (main-nursery) 9-12 bulan",
+        "penanaman": "Tanam bibit di lapangan dengan jarak tanam sekitar 9x9 m sistem segitiga",
+        "pemupukan": "Pupuk makro (N, P, K, Mg) rutin sesuai umur tanaman dan hasil analisis daun/tanah",
+        "pengendalian_hama_penyakit": "Waspada ulat api, kumbang tanduk (Oryctes), penyakit busuk pangkal batang (Ganoderma)",
+        "panen": "Mulai berproduksi umur 3-4 tahun, panen tandan buah segar (TBS) rutin tiap 7-10 hari"
+      },
+      "musim_tanam_indonesia": "Penanaman baru idealnya awal musim hujan",
+      "catatan_global": "Indonesia dan Malaysia adalah dua produsen dan eksportir minyak sawit terbesar dunia, menguasai mayoritas produksi global."
+    },
+    {
+      "nama": "Singkong (Ubi Kayu)",
+      "kategori": "Tanaman Pangan/Palawija",
+      "ringkasan_cepat": "Singkong tahan kekeringan dan lahan kurang subur, panen 7-12 bulan tergantung varietas dan tujuan (industri/konsumsi). Cocok untuk lahan kering/marginal. Indonesia penghasil besar di Asia Tenggara.",
+      "syarat_tumbuh": {
+        "iklim": "Tropis, toleran kekeringan, curah hujan 750-2000 mm/tahun",
+        "tanah": "Gembur, drainase baik, toleran tanah kurang subur sekalipun"
+      },
+      "tahapan_budidaya": {
+        "persiapan_lahan": "Olah tanah dan buat guludan/bedengan",
+        "penanaman": "Tanam stek batang sepanjang 20-25 cm, jarak tanam sekitar 100x80 cm",
+        "pemupukan": "Pupuk dasar NPK + kandang, pupuk susulan pada umur 1-2 bulan dan 3-4 bulan",
+        "pengendalian_hama_penyakit": "Waspada tungau merah, penyakit layu bakteri/CMD (mosaik singkong)",
+        "panen": "7-12 bulan setelah tanam tergantung varietas dan kebutuhan (industri vs konsumsi)"
+      },
+      "musim_tanam_indonesia": "Awal musim hujan, cocok juga lahan kering/marginal",
+      "catatan_global": "Produsen utama dunia: Nigeria, Republik Demokratik Kongo, Thailand, Indonesia termasuk penghasil besar di Asia Tenggara."
+    },
+    {
+      "nama": "Tomat",
+      "kategori": "Hortikultura",
+      "ringkasan_cepat": "Tomat optimal di dataran menengah-tinggi (200-1500 mdpl), butuh ajir/lanjaran, panen 70-90 hari lalu dipanen berkala tiap 3-4 hari. Rawan busuk daun (late blight) di musim hujan — lebih aman ditanam awal kemarau.",
+      "syarat_tumbuh": {
+        "iklim": "Sejuk-hangat, suhu optimal 20-27°C",
+        "ketinggian": "Optimal dataran menengah-tinggi 200-1500 mdpl",
+        "tanah": "Gembur, subur, drainase baik, pH 5,5-6,5"
+      },
+      "tahapan_budidaya": {
+        "pembibitan": "Semai benih di tray 3-4 minggu sebelum tanam pindah",
+        "penanaman": "Tanam pindah dengan ajir/lanjaran untuk menopang batang, jarak tanam sekitar 60x50 cm",
+        "pemupukan": "Pupuk dasar kandang + NPK, pupuk susulan berkala terutama fase berbunga-berbuah",
+        "pengendalian_hama_penyakit": "Waspada lalat buah, ulat buah, layu bakteri, busuk daun (late blight)",
+        "panen": "70-90 hari setelah tanam, panen berkala tiap 3-4 hari"
+      },
+      "musim_tanam_indonesia": "Optimal awal musim kemarau untuk menekan penyakit akibat kelembapan tinggi",
+      "catatan_global": "Produsen utama dunia: Tiongkok, India, Turki, Amerika Serikat."
+    }
+  ]
+}

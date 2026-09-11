@@ -1,0 +1,42 @@
+{
+  "catatan_penting": "File ini HANYA berisi SKEMA/STRUKTUR data harga, bukan angka harga sungguhan. Angka harga wajib diambil live saat pengguna bertanya (lihat aturan_harga_pasar di ai_behavior_rules.json), lalu dipetakan ke struktur di bawah ini sebelum ditampilkan ke pengguna atau disimpan sementara sebagai cache.",
+
+  "sumber_data_disarankan": [
+    {
+      "nama": "Panel Harga Pangan - Badan Pangan Nasional",
+      "url": "https://panelharga.badanpangan.go.id",
+      "cakupan": "Harga pangan strategis (beras, cabai, bawang, daging, dll) per provinsi/kabupaten di Indonesia"
+    },
+    {
+      "nama": "PIHPS Nasional - Bank Indonesia",
+      "url": "https://www.bi.go.id/hargapangan",
+      "cakupan": "Harga bahan pangan pokok tingkat pasar tradisional/modern"
+    },
+    {
+      "nama": "Pencarian berita/internet realtime",
+      "cakupan": "Untuk komoditas ekspor (sawit, kopi, kakao) atau saat API resmi tidak tersedia"
+    }
+  ],
+
+  "struktur_data_harga": {
+    "komoditas": "string, contoh: 'Cabai Rawit Merah'",
+    "satuan": "string, contoh: 'Rp/kg'",
+    "harga": "number, WAJIB hasil pengambilan data live, jangan diisi manual/dikarang",
+    "wilayah": "string, contoh: 'Kota Semarang' atau 'Rata-rata Nasional'",
+    "tanggal_data": "string format YYYY-MM-DD, tanggal data ini berlaku",
+    "sumber": "string, nama sumber data sesuai daftar sumber_data_disarankan atau sumber lain yang valid",
+    "tren": "string opsional: 'naik' | 'turun' | 'stabil' dibanding periode sebelumnya, jika datanya tersedia"
+  },
+
+  "contoh_pengisian_setelah_fetch_live": {
+    "komoditas": "Cabai Rawit Merah",
+    "satuan": "Rp/kg",
+    "harga": "<ISI_DARI_HASIL_FETCH_LIVE>",
+    "wilayah": "Rata-rata Nasional",
+    "tanggal_data": "<ISI_TANGGAL_SAAT_FETCH>",
+    "sumber": "Panel Harga Pangan - Badan Pangan Nasional",
+    "tren": "<ISI_JIKA_TERSEDIA>"
+  },
+
+  "format_respons_ai_ke_pengguna": "Harga {komoditas} di {wilayah} saat ini sekitar {harga} {satuan} (data {tanggal_data}, sumber: {sumber})."
+}
