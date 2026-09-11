@@ -27,6 +27,6 @@ app.use(express.static(__dirname));
 
 app.listen(PORT, () => {
   console.log(`\n✅ LinkPanen AI backend jalan di http://localhost:${PORT}`);
-  console.log(`   Buka: http://localhost:${PORT}/LinkPanen_V23_AI_DATABASE_PRO.html`);
+  console.log(`   Buka: http://localhost:${PORT}/`);
   console.log(`   (JANGAN buka file HTML-nya langsung lewat double-click / file:// — fetch ke /api tidak akan bekerja)\n`);
 });

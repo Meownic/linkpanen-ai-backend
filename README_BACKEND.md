@@ -1,7 +1,7 @@
 # Kenapa AI LinkPanen Cuma Jawab Template — dan Cara Memperbaikinya
 
 ## Akar masalahnya
-Web LinkPanen kamu (`LinkPanen_V23_AI_DATABASE_PRO.html`) sudah didesain untuk memanggil AI sungguhan lewat `fetch('/api/linkpanen-ai', ...)`. **Tapi server yang menjalankan `/api/linkpanen-ai` itu belum pernah ada/jalan.** Selama ini kamu membuka file HTML-nya langsung lewat `file:///C:/Users/...` (double-click), sehingga:
+Web LinkPanen kamu (`index.html`) sudah didesain untuk memanggil AI sungguhan lewat `fetch('/api/linkpanen-ai', ...)`. **Tapi server yang menjalankan `/api/linkpanen-ai` itu belum pernah ada/jalan.** Selama ini kamu membuka file HTML-nya langsung lewat `file:///C:/Users/...` (double-click), sehingga:
 
 1. `fetch('/api/linkpanen-ai')` **selalu gagal** (tidak ada server yang mendengarkan di alamat itu).
 2. Kode langsung masuk `catch(e)` dan memakai fungsi cadangan `buildAIResponse()` — ini murni pencocokan kata kunci pakai regex, **bukan AI**. Kalau pertanyaanmu tidak cocok satu pun kata kunci yang terdaftar di situ, dia jatuh ke jawaban template default ("Saya adalah LinkPanen AI...").
@@ -22,7 +22,7 @@ File `server.js` adalah backend sungguhan yang:
    - `server.js`
    - `package.json`
    - `.env.example`
-   - `LinkPanen_V23_AI_DATABASE_PRO.html`
+   - `index.html`
    - folder `data/` (isinya 4 file JSON basis pengetahuan)
 3. **Buat API key Gemini**: buka https://aistudio.google.com/apikey → buat akun/masuk → buat API key baru.
 4. Di dalam folder itu, salin `.env.example` jadi file baru bernama `.env`, lalu isi:
@@ -38,7 +38,7 @@ File `server.js` adalah backend sungguhan yang:
    ```
 6. Kalau muncul tulisan `✅ LinkPanen AI backend jalan di http://localhost:3000`, **buka browser dan akses**:
    ```
-   http://localhost:3000/LinkPanen_V23_AI_DATABASE_PRO.html
+   http://localhost:3000/
    ```
    **Jangan** dibuka lagi lewat double-click file / `file://` — itu penyebab utama masalahnya.
 
